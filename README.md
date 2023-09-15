@@ -1,6 +1,8 @@
 # OnlineDemo
 You can see online users of your system live through this code
 
+** SQL server And .Net 7 **
+
 script :
 
 CREATE DATABASE OnlineDemoDatabase
