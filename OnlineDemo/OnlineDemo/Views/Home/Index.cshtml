@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <strong>Online users</strong>
+    <ul id="online">
+    </ul>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+            setInterval(() => { 
+                $.ajax('/home/isonline')
+                    .done((result) => {
+                        $('#online').html(result);
+                    })
+            }, 1000);
+        });
+    </script>
+}
